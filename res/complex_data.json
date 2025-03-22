@@ -1,0 +1,84 @@
+{
+    "testInput":
+    {
+        "A": "000",
+        "B": 0,
+        "C": 1.2,
+        "D": false,
+        "E": null,
+        "F":
+        [
+            {
+                "G": "111",
+                "H": "222"
+            },
+            {
+                "G": null
+            }
+        ],
+        "I":
+        [
+            {
+                "J": 
+                { 
+                    "K": 3 
+                },
+                "L": false
+            },
+            {
+                "J":
+                { 
+                    "K": 4 
+                },
+                "L": false
+            }
+        ],
+        "M":
+        {
+            "N":
+            {
+                "O": 5.6
+            }
+        },
+        "P":
+        [
+            {
+                "Q": 
+                {
+                    "R":
+                    [
+                        {
+                            "S": 7,
+                            "T": "333"
+                        },
+                        {
+                            "S": "444"
+                        }
+                    ]
+                }
+            },
+            {
+                "Q": null
+            }
+        ],
+        "U": ["555", "666"],
+        "V": [8, 9],
+        "W": [10.11, 12.13]
+    },
+    "expectedOutput":
+    {
+        "result":
+        [
+            "A -> str", "B -> int", "C -> float", "D -> bool", "E -> null", 
+            "F -> objectArray", "F/0/G -> str", "F/0/H -> str", 
+            "F/1/G -> null", "I -> objectArray", "I/0/J -> object", 
+            "I/0/J/K -> int", "I/0/L -> bool", "I/1/J -> object", 
+            "I/1/J/K -> int", "I/1/L -> bool", "M -> object", 
+            "M/N -> object", "M/N/O -> float", "P -> objectArray", 
+            "P/0/Q -> object", "P/0/Q/R -> objectArray", "P/0/Q/R/0/S -> int", 
+            "P/0/Q/R/0/T -> str", "P/0/Q/R/1/S -> str", "P/1/Q -> null", 
+            "U -> strArray", "V -> intArray", "W -> floatArray"
+        ],
+        "errCode": "OK"
+    }
+}

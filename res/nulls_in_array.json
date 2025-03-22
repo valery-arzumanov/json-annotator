@@ -1,0 +1,11 @@
+{
+    "testInput":
+    {
+        "A": [null, null]
+    },
+    "expectedOutput":
+    {
+        "result": [],
+        "errCode": "NULLS_IN_ARRAY"
+    }
+}

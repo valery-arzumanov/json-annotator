@@ -1,0 +1,11 @@
+{
+    "testInput":
+    {
+        "A": ["0", 1]
+    },
+    "expectedOutput":
+    {
+        "result": [],
+        "errCode": "DIFFERENT_ARRAY_ITEM_TYPES"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "testInput":
+    {
+        "A": [false, true]
+    },
+    "expectedOutput":
+    {
+        "result": [],
+        "errCode": "BOOLS_IN_ARRAY"
+    }
+}
