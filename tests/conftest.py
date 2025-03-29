@@ -9,7 +9,7 @@ from json_annotator.annotation import JsonAnnotator
 @pytest.fixture
 def get_annotator() -> typing.Generator[JsonAnnotator, None, None]:
     """ 
-    Creates a JSONAnnotator object
+    Creates a JsonAnnotator object
 
     Parameters
     ----------
@@ -18,7 +18,7 @@ def get_annotator() -> typing.Generator[JsonAnnotator, None, None]:
     Yields
     -------
     `JsonAnnotator`
-        JSONAnnotator object
+        JsonAnnotator object
     """
 
     annotator: JsonAnnotator = JsonAnnotator("/", " -> ")

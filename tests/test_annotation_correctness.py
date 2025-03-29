@@ -22,7 +22,7 @@ def test_annotations(
     test_name
         test name
     get_annotator
-        a `pytest` fixture required to get a JSONAnnotator object
+        a `pytest` fixture required to get a JsonAnnotator object
 
     Returns
     -------
