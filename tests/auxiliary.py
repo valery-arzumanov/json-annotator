@@ -22,7 +22,7 @@ def get_test_names() -> list[str]:
 
 def error_code_registered(error_code_name: str) -> bool:
     """ 
-    Tests whether an enum has an item with a given name
+    Tests whether an error code is known
 
     Parameters
     ----------
@@ -70,7 +70,7 @@ def invalid_type_report(node_name: str|None, expected_type: str, where: str,
 def missing_item_report(node_name: str, where: str,
                         parent_node_name: str|None = None) -> str:
     """ 
-    Creates a message about an invalid type based on the given params 
+    Creates a message about a missing item based on the given params
 
     Parameters
     ----------
