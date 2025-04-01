@@ -32,8 +32,7 @@ def error_code_registered(error_code_name: str) -> bool:
     Returns
     -------
     `bool`
-        true if the value with a given is a valid error code,
-        false otherwise
+        true if the error code name is valid, false otherwise
     """
 
     return error_code_name in ErrorCode.__members__
