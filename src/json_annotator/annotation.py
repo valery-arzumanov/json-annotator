@@ -145,7 +145,10 @@ class JsonAnnotator:
             path_to_node_check_value: str = "#"
             if self.node_separator in path_to_node:
                 path_to_node_check_value = (
-                    path_to_node[path_to_node.rindex(self.node_separator)+1:]
+                    path_to_node[
+                        path_to_node.rindex(self.node_separator)+
+                                        len(self.node_separator):
+                    ]
                 )
             if index == 0 and not path_to_node_check_value.isnumeric():
                 dest.append(f'{path_to_node}{self.type_indication_mark}object')
