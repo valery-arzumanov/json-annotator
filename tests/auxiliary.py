@@ -26,7 +26,7 @@ def error_code_registered(error_code_name: str) -> bool:
 
     Parameters
     ----------
-    error_code_name
+    error_code_name : `str`
         a name of error code to be searched for
         
     Returns
@@ -44,14 +44,14 @@ def invalid_type_report(node_name: str|None, expected_type: str, where: str,
 
     Parameters
     ----------
-    node_name
+    node_name : `str` or `None`
         a JSON object, array or a node of some other type, 
         if `None` string "Data" is assigned
-    expected_type
+    expected_type : `str` 
         the expected type of the value
-    where
+    where : `str`
         file name with JSON content
-    parent_node
+    parent_node : `str` or `None`
         parent node name (if exists)
         
     Returns
@@ -73,11 +73,11 @@ def missing_item_report(node_name: str, where: str,
 
     Parameters
     ----------
-    node_name
+    node_name : `str`
         a JSON object, array or a node of some other type
-    where
+    where : `str`
         file name with JSON content
-    parent_node
+    parent_node : `str` or `None`
         parent node name (if exists)
         
     Returns

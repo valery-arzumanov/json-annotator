@@ -19,7 +19,7 @@ def test_resource_file_presence(test_name: str) -> None:
 
     Parameters
     ----------
-    test_name
+    test_name : `str`
         test name
 
     Returns
@@ -43,7 +43,7 @@ def test_resource_file_format_correctness(test_name: str) -> None:
 
     Parameters
     ----------
-    test_name
+    test_name : `str`
         test name
 
     Returns

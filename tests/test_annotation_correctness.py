@@ -19,9 +19,9 @@ def test_annotations(
 
     Parameters
     ----------
-    test_name
+    test_name : `str`
         test name
-    get_annotator
+    get_annotator : `JsonAnnotator`
         a `pytest` fixture required to get a JsonAnnotator object
 
     Returns
