@@ -1,6 +1,6 @@
 """ Utility functions """
 
-from json_annotator.annotation import JsonAnnotator, ErrorCode
+from json_annotator.annotation import ErrorCode
 
 
 def get_test_names() -> list[str]:
