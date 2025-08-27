@@ -1,8 +1,8 @@
 # JSON Annotator
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nlohmann/json/master/LICENSE.MIT)
-[![GitHub Issues](https://img.shields.io/github/issues/valery-arzumanov/json-annotator.svg)](https://github.com/valery-arzumanov/json-annotator/issues)
-[![Python Versions](https://img.shields.io/python/required-version-toml?tomlFilePath=https://raw.githubusercontent.com/valery-arzumanov/json-annotator/main/pyproject.toml)](https://www.python.org)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/valery-arzumanov/json-doc-annotator/master/LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/valery-arzumanov/json-doc-annotator.svg)](https://github.com/valery-arzumanov/json-doc-annotator/issues)
+[![Python Versions](https://img.shields.io/python/required-version-toml?tomlFilePath=https://raw.githubusercontent.com/valery-arzumanov/json-doc-annotator/main/pyproject.toml)](https://www.python.org)
 
 - [Preamble](#preamble)
 - [Design goals](#design-goals)
@@ -55,7 +55,7 @@ The resulting string has the following format: `<JP><SE><TH>`. Mind the absence 
 > Taking into the consideration the above, it is possible to figure out that the annotator will yield only 4 pointer-like structures: `A`, `A/B`, `C`, `C/D`.
 
 ## Installation
-To install the package it is necessary to perform the following steps: 
+To install the package it is necessary to perform the following steps:
 1. Make sure that your `Python` interpreter's version meets the requirements.
 2. Clone the repository.
 3. Launch system terminal and `cd` into the directory, where the repository was cloned prior.
@@ -76,7 +76,7 @@ Library basic usage is rather simple. Here is a brief example:
 >>> result: ErrorData = annotator.build_node_reprs(json_content)
 >>> if result.code == ErrorCode.OK:
 ...     print(annotator.get_node_repr_list())
-...     
+...
 ['A -> object', 'A/B -> intArray', 'C -> object', 'C/D -> str']
 ```
 
@@ -118,7 +118,7 @@ Consider the following snippet:
 What does a pair `(100, 100)` correspond to? Is it *x* and *y* or *width* and *height*? What about "Levels"? Is it object's name, first line or something else? If the structure remains intact, it will be difficult enough to come up with an array name, which will resolve the ambiguity. It is better to transform the array into a JSON object, which will be more illustrative:
 ```json
 {
-    "objectData": 
+    "objectData":
     {
         "X": 100,
         "Y": 100,
@@ -141,7 +141,7 @@ Consider the following 2 snippets:
     "objectFlags": [null, null, null]
 }
 ```
-Albeit these arrays are completely valid from a syntax perspective, it is impossible to understand, what the values correspond to. Hence, one can get confused and make a mistake, because the order of values in this case may be only memorized. It is a good idea to transform these arrays into JSON objects as well. The annotator will return `ErrorCode.NULLS_IN_ARRAY` (`4`) and `ErrorCode.BOOLS_IN_ARRAY` (`5`) if there are nulls or boolean values in the input JSON array, respectively. 
+Albeit these arrays are completely valid from a syntax perspective, it is impossible to understand, what the values correspond to. Hence, one can get confused and make a mistake, because the order of values in this case may be only memorized. It is a good idea to transform these arrays into JSON objects as well. The annotator will return `ErrorCode.NULLS_IN_ARRAY` (`4`) and `ErrorCode.BOOLS_IN_ARRAY` (`5`) if there are nulls or boolean values in the input JSON array, respectively.
 
 ## References
 1. Bryan, P., Ed., Zyp, K., and M. Nottingham, Ed., "JavaScript Object Notation (JSON) Pointer", RFC 6901, DOI 10.17487/RFC6901, April 2013, <https://www.rfc-editor.org/info/rfc6901>.
